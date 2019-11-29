@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Poke´desk</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Library -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	 crossorigin="anonymous">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/2.0.5/velocity.min.js">
+	</script>
+
+	<!-- Font -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+	<!-- Custom JS-->
+	<script src="js/custom/api.js">
+	</script>
+	<script defer src="js/custom/script.js">
+	</script>
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+
+<body>
+
+	<!-- Header Block -->
+	<div class="header">
+		<h1>Poke-Desk</h1>
+	</div>
+
+	<!-- List Block -->
+	<div class="list-container">
+		<ul type="none" id="pokemon-list">
+		</ul>
+	</div>
+
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+
+			<div class="modal-header">
+				<h2 id="modal-name">Pokemon Name</h2>
+				<span class="close">&times;</span>
+          </div>
+
+          <div class="modal-img-txt">
+            <div style="flex-direction:column">
+            <p><b>Height :</b><span id="modal-height"> </span></p>
+            <p><b>Weight :</b><span id="modal-weight"> </span></p>
+            </div>
+
+            <span><img id="modal-image"></span>
+          </div>
+        </div> 
+    </div>
+
+    <!-- Loader -->
+    <div id="loader">
+        <img src="img/loader/pokeball.webp">
+    </div>
+</body>
+
+</html>
