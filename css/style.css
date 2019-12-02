@@ -1,74 +1,5 @@
-.header{
-  position:fixed;
-  top:0;
-  left:0;
-  width: 100%;
-  text-align: center;
-  background-color:#ffffff;
-  box-shadow:0px 0px 10px #dfdfdf;
-}
-
-.list-container{
-  display:flex;
-  justify-content: center;
+.btn-list-container{
   margin-top:100px;
-}
-
-.pokemon-button{
-  text-align: center;
-  min-width:150px;
-  padding: 10px 30px 10px 30px;
-  font-size:14px;
-  margin:5px;
-  -webkit-appearance: none;
-  border-radius:5px;
-  box-shadow: 0px 0px 10px #dfdfdf;
-}
-
-.pokemon-button:focus{
-outline:none;
-}
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  justify-content:center;
-  align-items:center;
-  overflow: auto; /* Enable scroll if needed */
-  background-color: transparent; /* Fallback color */
-}
-
-/* Modal Content/Box */
-.modal-content {
-  display:flex;
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  min-width: 30%; /* Could be more or less, depending on screen size */
-  border-radius:8px;
-  box-shadow:0px 0px 10px #dfdfdf;
-  flex-direction:column;
-}
-
-/* The Close Button */
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
 }
 
 #loader{
@@ -85,12 +16,6 @@ outline:none;
 
 #loader img{
   width:50px;
-}
-
-.modal-header{
-  display:flex;
-  justify-content:space-between;
-  width:100%;
 }
 
 .modal-img-txt{

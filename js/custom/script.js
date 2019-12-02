@@ -2,34 +2,10 @@ var pokemonList = $('#pokemon-list');
 var loader = $('#loader');
 
 // Get the modal
-var modal = $('#myModal');
-var modalName = $('#modal-name');
+var modalName = $('#modal-title');
 var modalHeight = $('#modal-height');
 var modalWeight = $('#modal-weight');
 var modalImage = $('#modal-image');
-
-// Get the <span> element that closes the modal
-var span = $(".close")[0];
-
-// When the user clicks on <span> (x), close the modal
-$(".close").click(function () {
-  modal.css("display", "none");
-});
-
-// When the user clicks anywhere outside of the modal, close it
-$(window).click(function (event) {
-  if (event.target.id == 'myModal') {
-    modal.css("display", "none");
-  }
-})
-
-// Close on escape
-$(document).keydown(function (evt) {
-  evt = evt || window.event;
-  if (evt.keyCode == 27) {
-    modal.css("display", "none");
-  }
-});
 
 /* 
  * Get pokemon button click event 
@@ -42,20 +18,20 @@ async function loadDetails(url) {
   modalHeight.text(details.height);
   modalWeight.text(details.weight);
   modalImage.attr("src", details.sprites.front_default);
-  modal.css("display", "flex");
+  // modal.css("display", "flex");
   showLoader(false);
 }
 
 /* Append pokemon button */
 function appendPokemonButton(pokemonName, detailUrl) {
-  pokemonList.append(`<li><button class="pokemon-button" onclick="loadDetails('${detailUrl}')">${pokemonName.charAt(0).toUpperCase() + pokemonName.slice(1)}</button></li>`)
+  pokemonList.append(`<li class="list-group-item"><button class="m-1 btn btn-block btn-dark" data-toggle="modal" aria-label="${pokemonName}" aria-controls="#myModal" data-target="#myModal" onclick="loadDetails('${detailUrl}')">${pokemonName.charAt(0).toUpperCase() + pokemonName.slice(1)}</button></li>`)
 }
 
 /* Velocity and mouse hover*/
 function setupAnimation() {
   buttons = $('button');
   buttons.on('mouseover', function () {
-    Velocity(this, { "font-size": "21px" });
+    Velocity(this, { "font-size": "18px" });
   });
 
   buttons.on('mouseout', function () {
